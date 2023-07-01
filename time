@@ -1,0 +1,17 @@
+# um programa que lê o tempo de duração de um evento evento em uma fábrica, expresso em segundos, e mostra-o expresso em horas, minutos e segundos
+
+segundos = int(input("Digite o tempo de duração de um evento em uma fábrica em segundos: "))
+minutos = int(segundos/60)
+horas = int(segundos/3600)
+
+if segundos % 60 != 0:
+  segundos = int(segundos%60)
+else:
+  segundos = int(0)
+
+if minutos % 60 != 0:
+  minutos = int(minutos%60)
+else:
+  minutos = int(0)
+
+print("Aproximadamente: ", horas, "h", minutos, "m", segundos, "s")
