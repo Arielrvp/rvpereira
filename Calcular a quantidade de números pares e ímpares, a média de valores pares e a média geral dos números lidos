@@ -1,0 +1,23 @@
+n = 1
+c = 0
+cp = 0
+ci = 0
+numeradorgeral = 0
+numeradorpares = 0
+print("Para encerrar o programa digite zero")
+while n != 0:
+  n = int(input("Digite um número natural positivo: "))
+  c = c + 1
+  if n % 2 == 0:
+    cp = cp + 1
+    numeradorpares = numeradorpares + n
+  else:
+    ci = ci + 1
+  numeradorgeral = numeradorgeral + n
+cfp = cp - 1
+mediapares = numeradorpares/cfp
+mediageral = (numeradorgeral)/(c-1)
+print("A quantidade de números pares inseridos foi: ", cfp)
+print("A quantidade de números impares inseridos foi: ", ci)
+print("A média de valores pares foi: ", mediapares)
+print("A média geral dos números lidos foi: ", mediageral)
