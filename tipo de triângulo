@@ -1,0 +1,22 @@
+na = int(input("Digite o valor do lado A: "))
+nb = int(input("Digite o valor do lado B: "))
+nc = int(input("Digite o valor do lado C: "))
+
+
+s1 = int(nb)+int(nc)
+s2 = int(na)+int(nc)
+s3 = int(na)+int(nb)
+
+if na < s1 and nb < s2 and nc < s3:
+  print("Os valores fornecidos formam um triângulo.")
+  if (na == nb and nc != na and nc != nb) or (nb == nc and na != nb and na != nc) or (na == nc and nb != na and nb != nc):
+    print("O tipo de triângulo formado é isósceles.")
+  elif na != nb != nc:
+    print("O tipo de triângulo formado é escaleno.")
+  else:
+    if na == nb == nc:
+      print("O tipo de triângulo formado é equilátero.")
+    else:
+      print()
+else:
+  print("Os valores fornecidos não formam um triângulo.")
