@@ -1,0 +1,57 @@
+# um programa que leia um valor inteiro em reais e calcule qual o menor número possível de notas de 100, 50, 20, 10, 5 e 1 em que o valor lido pode ser decomposto
+
+dinheiro = int(input("Digite um valor inteiro em reais: "))
+valor = dinheiro
+
+n100 = int(valor/100)
+n50 = int(valor/50)
+n20 = int(valor/20)
+n10 = int(valor/10)
+n5 = int(valor/5)
+n1 = int(valor)
+
+if dinheiro % 100 != 0:
+  valor = valor - (n100*100)
+n50 = int(valor/50)
+if dinheiro % 50 != 0:
+  valor = valor - (n50*50)
+n20 = int(valor/20)
+if dinheiro % 20 != 0:
+  valor = valor - (n20*20)
+n10 = int(valor/10)
+if dinheiro % 10 != 0:
+  valor = valor - (n10*10)
+n5 = int(valor/5)
+if dinheiro % 5 != 0:
+  valor = valor - (n5*5)
+n1 = valor
+
+if dinheiro % 100 == 0:
+  n50 = 0
+  n20 = 0
+  n10 = 0
+  n5 = 0
+  n1 = 0
+if dinheiro % 50 == 0:
+  n20 = 0
+  n10 = 0
+  n5 = 0
+  n1 = 0
+if dinheiro % 20 == 0:
+  n10 = 0
+  n5 = 0
+  n1 = 0
+if dinheiro % 10 == 0:
+  n5 = 0
+  n1 = 0
+if dinheiro % 5 == 0:
+  n1 = 0
+
+
+print("R$",dinheiro, "decomposto no menor número possível de notas de 100, 50, 20, 10, 5 e 1, será: ")
+print(n100 ,"notas de R$ 100,00")
+print(n50, "notas de R$ 50,00")
+print(n20, "notas de R$ 20,00")
+print(n10, "notas de R$ 10,00")
+print(n5, "notas de R$ 5,00")
+print(n1, "notas de R$ 1,00")
