@@ -1,0 +1,8 @@
+celsius = float(input("Digite um valor em graus Celsius para converte-lo para graus Fahrenheit: "))
+
+def convert(celsius):
+  return ((9/5)*celsius)+32
+
+resultado = convert(celsius)
+
+print(celsius, "graus Celsius em graus Fahrenheit é: ", resultado, "graus Fahrenheit")
